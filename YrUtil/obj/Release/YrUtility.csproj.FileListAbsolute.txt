@@ -1,0 +1,13 @@
+D:\C#\Tools\YrUtility\bin\Release\YrUtility.dll
+D:\C#\Tools\YrUtility\bin\Release\YrUtility.pdb
+D:\C#\Tools\YrUtility\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\C#\Tools\YrUtility\bin\Release\NPOI.dll
+D:\C#\Tools\YrUtility\bin\Release\NPOI.OOXML.dll
+D:\C#\Tools\YrUtility\bin\Release\NPOI.OpenXml4Net.dll
+D:\C#\Tools\YrUtility\bin\Release\NPOI.OpenXmlFormats.dll
+D:\C#\Tools\YrUtility\bin\Release\NPOI.xml
+D:\C#\Tools\YrUtility\bin\Release\NPOI.OOXML.xml
+D:\C#\Tools\YrUtility\bin\Release\NPOI.OpenXml4Net.xml
+D:\C#\Tools\YrUtility\obj\Release\YrUtility.csprojResolveAssemblyReference.cache
+D:\C#\Tools\YrUtility\obj\Release\YrUtility.dll
+D:\C#\Tools\YrUtility\obj\Release\YrUtility.pdb

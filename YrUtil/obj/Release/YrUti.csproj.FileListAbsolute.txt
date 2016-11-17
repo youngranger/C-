@@ -1,0 +1,8 @@
+E:\Code\C# Code\Utility\YrUtility\bin\Release\YrUtility.dll
+E:\Code\C# Code\Utility\YrUtility\bin\Release\YrUtility.pdb
+E:\Code\C# Code\Utility\YrUtility\bin\Release\NPOI.xml
+E:\Code\C# Code\Utility\YrUtility\bin\Release\NPOI.OOXML.xml
+E:\Code\C# Code\Utility\YrUtility\bin\Release\NPOI.OpenXml4Net.xml
+E:\Code\C# Code\Utility\YrUtility\obj\Release\YrUti.csprojResolveAssemblyReference.cache
+E:\Code\C# Code\Utility\YrUtility\obj\Release\YrUtility.dll
+E:\Code\C# Code\Utility\YrUtility\obj\Release\YrUtility.pdb
