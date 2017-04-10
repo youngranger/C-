@@ -1,0 +1,11 @@
+E:\Code\C#\YrUtil\YrUti.Collections.Genericc\obj\Debug\YrUti.csprojResolveAssemblyReference.cache
+E:\Code\C#\YrUtil\YrUti.Collections.Genericc\bin\Debug\YrUti.Collections.Genericc.exe
+E:\Code\C#\YrUtil\YrUti.Collections.Genericc\bin\Debug\YrUti.Collections.Genericc.pdb
+E:\Code\C#\YrUtil\YrUti.Collections.Genericc\obj\Debug\YrUti.Collections.Genericc.exe
+E:\Code\C#\YrUtil\YrUti.Collections.Genericc\obj\Debug\YrUti.Collections.Genericc.pdb
+E:\Code\C#\YrUtil\YrUti\bin\Debug\YrUti.exe.config
+E:\Code\C#\YrUtil\YrUti\bin\Debug\YrUti.exe
+E:\Code\C#\YrUtil\YrUti\bin\Debug\YrUti.pdb
+E:\Code\C#\YrUtil\YrUti\obj\Debug\YrUti.exe
+E:\Code\C#\YrUtil\YrUti\obj\Debug\YrUti.pdb
+E:\Code\C#\YrUtil\YrUti\obj\Debug\YrUti.csprojResolveAssemblyReference.cache

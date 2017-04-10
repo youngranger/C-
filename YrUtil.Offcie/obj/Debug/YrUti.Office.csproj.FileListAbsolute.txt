@@ -1,0 +1,14 @@
+E:\Code\C#\YrUtil\YrUtil\obj\Debug\YrUti.Office.csprojResolveAssemblyReference.cache
+E:\Code\C#\YrUtil\YrUtil\obj\Debug\YrUti.dll
+E:\Code\C#\YrUtil\YrUtil\obj\Debug\YrUti.pdb
+E:\Code\C#\YrUtil\YrUtil\bin\Debug\YrUti.dll
+E:\Code\C#\YrUtil\YrUtil\bin\Debug\YrUti.pdb
+E:\Code\C#\YrUtil\YrUtil\bin\Debug\YrUti.Collections.Genericc.exe
+E:\Code\C#\YrUtil\YrUtil\bin\Debug\YrUti.Collections.Genericc.pdb
+E:\Code\C#\YrUtil\YrUtil.Offcie\bin\Debug\YrUti.Office.dll
+E:\Code\C#\YrUtil\YrUtil.Offcie\bin\Debug\YrUti.Office.pdb
+E:\Code\C#\YrUtil\YrUtil.Offcie\bin\Debug\YrUti.exe
+E:\Code\C#\YrUtil\YrUtil.Offcie\bin\Debug\YrUti.pdb
+E:\Code\C#\YrUtil\YrUtil.Offcie\obj\Debug\YrUti.Office.csprojResolveAssemblyReference.cache
+E:\Code\C#\YrUtil\YrUtil.Offcie\obj\Debug\YrUti.Office.dll
+E:\Code\C#\YrUtil\YrUtil.Offcie\obj\Debug\YrUti.Office.pdb

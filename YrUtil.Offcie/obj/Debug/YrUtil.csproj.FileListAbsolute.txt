@@ -1,0 +1,13 @@
+E:\Code\C# Code\YrUtil\YrUtil\bin\Debug\YrUtility.dll
+E:\Code\C# Code\YrUtil\YrUtil\bin\Debug\YrUtility.pdb
+E:\Code\C# Code\YrUtil\YrUtil\bin\Debug\NPOI.xml
+E:\Code\C# Code\YrUtil\YrUtil\bin\Debug\NPOI.OOXML.xml
+E:\Code\C# Code\YrUtil\YrUtil\bin\Debug\NPOI.OpenXml4Net.xml
+E:\Code\C# Code\YrUtil\YrUtil\obj\Debug\YrUtil.csprojResolveAssemblyReference.cache
+E:\Code\C# Code\YrUtil\YrUtil\obj\Debug\YrUtility.dll
+E:\Code\C# Code\YrUtil\YrUtil\obj\Debug\YrUtility.pdb
+E:\Code\C#\YrUtil\YrUtil\bin\Debug\YrUti.dll
+E:\Code\C#\YrUtil\YrUtil\bin\Debug\YrUti.pdb
+E:\Code\C#\YrUtil\YrUtil\obj\Debug\YrUtil.csprojResolveAssemblyReference.cache
+E:\Code\C#\YrUtil\YrUtil\obj\Debug\YrUti.dll
+E:\Code\C#\YrUtil\YrUtil\obj\Debug\YrUti.pdb

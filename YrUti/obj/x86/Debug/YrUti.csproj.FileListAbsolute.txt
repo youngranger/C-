@@ -1,0 +1,6 @@
+E:\Code\C#\YrUtil\YrUti\bin\x86\Debug\YrUti.exe.config
+E:\Code\C#\YrUtil\YrUti\bin\x86\Debug\YrUti.exe
+E:\Code\C#\YrUtil\YrUti\bin\x86\Debug\YrUti.pdb
+E:\Code\C#\YrUtil\YrUti\obj\x86\Debug\YrUti.csprojResolveAssemblyReference.cache
+E:\Code\C#\YrUtil\YrUti\obj\x86\Debug\YrUti.exe
+E:\Code\C#\YrUtil\YrUti\obj\x86\Debug\YrUti.pdb
