@@ -1,0 +1,11 @@
+E:\Code\C#\YrUtil\YrUtil.Offcie\obj\x86\Debug\YrUti.Office.csprojResolveAssemblyReference.cache
+E:\Code\C#\YrUtil\YrUtil.Offcie\bin\x86\Debug\YrUti.Office.dll
+E:\Code\C#\YrUtil\YrUtil.Offcie\bin\x86\Debug\YrUti.Office.pdb
+E:\Code\C#\YrUtil\YrUtil.Offcie\bin\x86\Debug\ICSharpCode.SharpZipLib.dll
+E:\Code\C#\YrUtil\YrUtil.Offcie\bin\x86\Debug\NPOI.dll
+E:\Code\C#\YrUtil\YrUtil.Offcie\bin\x86\Debug\NPOI.OOXML.dll
+E:\Code\C#\YrUtil\YrUtil.Offcie\bin\x86\Debug\NPOI.OpenXml4Net.dll
+E:\Code\C#\YrUtil\YrUtil.Offcie\bin\x86\Debug\NPOI.OpenXmlFormats.dll
+E:\Code\C#\YrUtil\YrUtil.Offcie\bin\x86\Debug\NPOI.xml
+E:\Code\C#\YrUtil\YrUtil.Offcie\obj\x86\Debug\YrUti.Office.dll
+E:\Code\C#\YrUtil\YrUtil.Offcie\obj\x86\Debug\YrUti.Office.pdb

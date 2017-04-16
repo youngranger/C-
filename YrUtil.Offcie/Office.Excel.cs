@@ -14,11 +14,35 @@ using NPOI.XSSF;
 using NPOI.XSSF.UserModel;
 using NPOI.SS.UserModel;
 using NPOI.SS.Util;
-using YrUti.File;
 
 namespace YrUti.Office
 {
-  
+     static class Tools
+    {
+        /// <summary>
+        /// 获取文件扩展名
+        /// </summary>
+        /// <param name="_filePath">文件全路径</param>
+        /// <returns>文件扩展名，不含"."</returns>
+        public static String GetExName(String _filePath)
+        {
+            if (!String.IsNullOrEmpty(_filePath))
+            {
+                if (_filePath.Contains("."))
+                {
+                    return _filePath.Substring(_filePath.LastIndexOf(".") + 1);
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
+    }
     public class Excel
     {
 
@@ -74,7 +98,7 @@ namespace YrUti.Office
             {
                 return null;
             }
-      
+
         }
 
         /// <summary>
@@ -84,12 +108,12 @@ namespace YrUti.Office
         /// <param name="sheet"></param>
         /// <param name="hasTitleRow"></param>
         /// <returns></returns>
-        private DataTable ExportToDataTable(ISheet sheet,Boolean hasTitleRow)
+        private DataTable ExportToDataTable(ISheet sheet, Boolean hasTitleRow)
         {
             DataTable dt = new DataTable();
-            for(int i = 0; i < sheet.GetRow(0).LastCellNum; i++)
+            for (int i = 0; i < sheet.GetRow(0).LastCellNum; i++)
             {
-                dt.Columns.Add("column"+i.ToString(), System.Type.GetType("System.String"));
+                dt.Columns.Add("column" + i.ToString(), System.Type.GetType("System.String"));
             }
             int offSet = 0;
 
@@ -107,12 +131,12 @@ namespace YrUti.Office
                 offSet = 1;
             }
 
-            
+
             //遍历数据行
             for (int i = (sheet.FirstRowNum + offSet), len = sheet.LastRowNum + offSet; i < len; i++)
             {
                 IRow tempRow = sheet.GetRow(i);
-                
+
                 DataRow dataRow = dt.NewRow();
 
                 //遍历一行的每一个单元格
@@ -124,24 +148,24 @@ namespace YrUti.Office
                     if (cell != null)
                     {
                         dataRow[r] = this.GetCellValue(cell);
-                            //switch (cell.CellType)
-                            //{
-                            //    case CellType.String:
-                            //        dataRow[r] = cell.StringCellValue;
-                            //        break;
-                            //    case CellType.Numeric:
-                            //        dataRow[r] = cell.NumericCellValue;
-                            //        break;
-                            //    case CellType.Boolean:
-                            //        dataRow[r] = cell.BooleanCellValue;
-                            //        break;
-                            //    case CellType.Blank: //空白
-                            //        dataRow[r] = "";
-                            //        break;
-                            //    default:
-                            //        dataRow[r] = cell.StringCellValue;
-                            //        break;
-                            //}
+                        //switch (cell.CellType)
+                        //{
+                        //    case CellType.String:
+                        //        dataRow[r] = cell.StringCellValue;
+                        //        break;
+                        //    case CellType.Numeric:
+                        //        dataRow[r] = cell.NumericCellValue;
+                        //        break;
+                        //    case CellType.Boolean:
+                        //        dataRow[r] = cell.BooleanCellValue;
+                        //        break;
+                        //    case CellType.Blank: //空白
+                        //        dataRow[r] = "";
+                        //        break;
+                        //    default:
+                        //        dataRow[r] = cell.StringCellValue;
+                        //        break;
+                        //}
                     }
                 }
                 dt.Rows.Add(dataRow);
@@ -155,7 +179,7 @@ namespace YrUti.Office
         /// <param name="sheet"></param>
         /// <param name="fields"></param>
         /// <returns></returns>
-        private IList<T> ExportToList<T>(ISheet sheet, string[] fields) where T : class,new()
+        private IList<T> ExportToList<T>(ISheet sheet, string[] fields) where T : class, new()
         {
             IList<T> list = new List<T>();
 
@@ -207,12 +231,12 @@ namespace YrUti.Office
 
             switch (cell.CellType)
             {
-                
+
                 case CellType.String: //文本
                     cellValue = cell.StringCellValue;
                     break;
                 case CellType.Numeric: //数值,可能是日期，或者数字
-                    if(DateUtil.IsCellDateFormatted(cell))//日期类型,有时候无法判断
+                    if (DateUtil.IsCellDateFormatted(cell))//日期类型,有时候无法判断
                     {
                         cellValue = cell.DateCellValue;
                     }
@@ -232,22 +256,22 @@ namespace YrUti.Office
                     cellValue = "内容未知";
                     break;
                 case CellType.Formula: //公式，可能是日期，或者其他数字
-                    
-                        IFormulaEvaluator eva;
-                        if (is07)
-                        {
-                            eva = new XSSFFormulaEvaluator(_IWorkbook);
-                        }
-                        else
-                        {
-                            eva = new HSSFFormulaEvaluator(_IWorkbook);
-                        } 
-                        cellValue = eva.Evaluate(cell).StringValue;
-                        if (eva == null)
-                        {
-                           return  cellValue.ToString();
-                        }
-                        break;
+
+                    IFormulaEvaluator eva;
+                    if (is07)
+                    {
+                        eva = new XSSFFormulaEvaluator(_IWorkbook);
+                    }
+                    else
+                    {
+                        eva = new HSSFFormulaEvaluator(_IWorkbook);
+                    }
+                    cellValue = eva.Evaluate(cell).StringValue;
+                    if (eva == null)
+                    {
+                        return cellValue.ToString();
+                    }
+                    break;
                 case CellType.Error: //空白
                     cellValue = "单元格格式错误";
                     break;
@@ -264,7 +288,7 @@ namespace YrUti.Office
         /// <param name="rowIndex">单元格行的索引，从0开始</param>
         /// <param name="columnIndex">单元格列的索引，从0开始</param>
         /// <returns></returns>
-        public string GetCellValue(int _sheetIndex,int rowIndex, int columnIndex)
+        public string GetCellValue(int _sheetIndex, int rowIndex, int columnIndex)
         {
             ISheet sheet = _IWorkbook.GetSheetAt(_sheetIndex);
             if (rowIndex >= sheet.LastRowNum)
@@ -273,7 +297,7 @@ namespace YrUti.Office
             }
             IRow row = sheet.GetRow(rowIndex);
 
-            if(columnIndex >= row.LastCellNum)
+            if (columnIndex >= row.LastCellNum)
             {
                 return null;
             }
@@ -360,9 +384,9 @@ namespace YrUti.Office
         /// <param name="sheetIndex">Sheet的索引，从0开始</param>
         /// <param name="hasTitleRow">Sheet第一行是否是标题行</param>
         /// <returns></returns>
-        public DataTable ExportSheetToDataTable(int sheetIndex,Boolean hasTitleRow)
+        public DataTable ExportSheetToDataTable(int sheetIndex, Boolean hasTitleRow)
         {
-            return ExportToDataTable(_IWorkbook.GetSheetAt(sheetIndex),hasTitleRow);
+            return ExportToDataTable(_IWorkbook.GetSheetAt(sheetIndex), hasTitleRow);
         }
 
 
@@ -371,7 +395,7 @@ namespace YrUti.Office
         /// </summary>
         /// <param name="fields">Excel各个列，依次要转换成为的对象字段名称</param>
         /// <returns></returns>
-        public IList<T> ExcelToList<T>(string[] fields) where T : class,new()
+        public IList<T> ExcelToList<T>(string[] fields) where T : class, new()
         {
             return ExportToList<T>(_IWorkbook.GetSheetAt(0), fields);
         }
@@ -382,7 +406,7 @@ namespace YrUti.Office
         /// <param name="sheetIndex">第几张Sheet,从1开始</param>
         /// <param name="fields">Excel各个列，依次要转换成为的对象字段名称</param>
         /// <returns></returns>
-        public IList<T> ExcelToList<T>(int sheetIndex, string[] fields) where T : class,new()
+        public IList<T> ExcelToList<T>(int sheetIndex, string[] fields) where T : class, new()
         {
             return ExportToList<T>(_IWorkbook.GetSheetAt(sheetIndex - 1), fields);
         }
@@ -434,7 +458,7 @@ namespace YrUti.Office
         /// <param name="rowIndex">cell的行索引，从0开始</param>
         /// <param name="colIndex">cell的列索引，从0开始</param>
         /// <returns>是否跨行跨列</returns>
-        public Boolean IsMergedCell(int sheetIndex,int rowIndex,int colIndex)
+        public Boolean IsMergedCell(int sheetIndex, int rowIndex, int colIndex)
         {
             ISheet sheet = _IWorkbook.GetSheetAt(sheetIndex);
             bool result = false;
@@ -456,18 +480,18 @@ namespace YrUti.Office
         /// <param name="rowIndex">行索引，从0开始</param>
         /// <param name="colIndex">列索引，从0开始</param>
         /// <returns>整形数组，第一个为跨行的数目，没有跨行，为1，第二个为跨列的数目，没有跨列，为1,行列号越界，则返回0</returns>
-        public int[] GetCellSpan(int sheetIndex,int rowIndex,int colIndex)
+        public int[] GetCellSpan(int sheetIndex, int rowIndex, int colIndex)
         {
             ISheet sheet = _IWorkbook.GetSheetAt(sheetIndex);
 
             int rowSpan = 0;
             int colSpan = 0;
-            if ((rowIndex < 0) || (colIndex < 0) || rowIndex >=sheet.LastRowNum || colIndex>=sheet.GetRow(rowIndex).LastCellNum)
+            if ((rowIndex < 0) || (colIndex < 0) || rowIndex >= sheet.LastRowNum || colIndex >= sheet.GetRow(rowIndex).LastCellNum)
             {
-                return  new int[] { rowSpan,colSpan};
+                return new int[] { rowSpan, colSpan };
             }
-            
-  
+
+
             int regionsCount = sheet.NumMergedRegions;
             rowSpan = 1;
             colSpan = 1;
@@ -486,5 +510,5 @@ namespace YrUti.Office
             return new int[] { rowSpan, colSpan };
         }
     }
-  
+
 }

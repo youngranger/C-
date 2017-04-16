@@ -35,7 +35,7 @@ namespace YrUti.File
         /// <summary>
         /// 创建一个文件，并写入内容
         /// </summary>
-        /// <param name="path"></param>
+        /// <param name="path">文件完整路径</param>
         /// <param name="content"></param>
         public static void CreateFile(String path, String content)
         {
@@ -45,6 +45,13 @@ namespace YrUti.File
                 {
                     System.IO.File.Delete(path);
                 }
+
+                FileInfo fi = new FileInfo(path);
+                var di = fi.Directory;
+                if (!di.Exists)
+                    di.Create();
+
+                ///System.IO.File.Create(path);
                 using (FileStream fs= new FileStream(path, FileMode.Create))
                 {
                     StreamWriter sw = new StreamWriter(fs);
@@ -81,7 +88,7 @@ namespace YrUti.File
                 {
                     byte[] data = new byte[fs.Length];
                     fs.Read(data, 0, data.Length);
-                    return System.Text.Encoding.Default.GetString(data);//从文件中获取的含有时间戳的验证码。
+                    return System.Text.Encoding.Default.GetString(data);//从文件中获取字符串。
                 }    
             }
             catch
